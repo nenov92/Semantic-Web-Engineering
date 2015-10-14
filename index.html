@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Schema.org & The Semantic web</title>
+		
+		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<script src="js/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="title">
+				<span>Schema.org, SOIC and the Semantic Web</span>
+			</div>
+			<!-- <nav class="nav">
+										<ul>
+																	<li class="navBtn"><a href="">SIOC</a></li>
+																	<li class="navBtn"><a href="">Overview</a></li>
+																	<li class="navBtn"><a href="index.html">Home</a></li>
+										</ul>
+			</nav> -->
+			<div id="centeredmenu">
+				<ul>
+					<li>History
+						<ul>
+							<li>Link one</li>
+							<li>Link two</li>
+							<li>Link three</li>
+							<li>Link four</li>
+							<li>Link five</li>
+						</ul>
+					</li>
+					<li>Schema.org</li>
+					<li>SIOC</li>
+					<li>References</li>
+				</ul>
+			</div>
+		</header>
+		<div class="textarea">
+			<h1>Semantic Web History Overview</h1>
+			<p>
+				The idea of a semantic network model was born in the early 1960s by cognitive scientist Allan
+				M. Collins, linguist M. Ross Quillian and psychologist Elizabeth F. Loftus. The
+				idea was to enable semantic relations between concepts and support of knowledge representation. In terms of computing, the idea of the semantic web is to enable machines to reason with human-readable data available on the web by inserting metadata that represents relations, objects and properties of content data. In the 1990s the following techniques were prevailing: XML (eXtensible Markup Language), MCF (Meta Content Framework), CDF (Channel Definition Format) and sitemaps. MCF was developed between 1995 and 1997 by Ramanathan V. Guha at Apple Computer's Advanced Technology Group. However, Guha left Apple to join Netscape where he began work on the Resource Description Framework (RDF) standard. In the summer of 1997 a meeting was held in MIT by Ramanathan V. Guha, Tim Bray and specialists from other leading companies with the goal to set a standard for all web pages that would enable easier implementation. At that time only about 5,000 web sites were indexing their content with metadata which made it difficult for search engines to display relevant results. In 1999 the W3C published a specification of RDF's data model and an XML serialization as a recommended standard to use. In the early 2000s more and more standards surfaced some of which were: DAML(DARPA Agent Markup Language), OWL(Web Ontology Language), OWL EL, OWL QL, OWL RL. Later, in 2004 work on the SIOC project was initiated by John Breslin and Uldis Bojārs, whose aim was to provide meaningful links between data residing in different online community websites. On June 20th 2005 Microformats was published as an approach using HTML/XHTML tags to specify metadata describing HTML content.
+				<br />
+				Since the emergence of Web 2.0 the competition between search engine providers became even more apparent. As a consequence, in May 2008 Yahoo! launched SearchMonkey which allowed developers and webmasters to index their web sites in order to show more useful and visually appealing results. That was favourable for both sides because webmasters who indexed their web pages would draw more traffic and Yahoo! would attract more users. SearchMonkey used standard markup and vocabularies such as Microformats, RDFa and eRDF. Other search engines were not late to follow Yahoo!'s lead in implementing semantic web technologies to provide better services to their users. In 2009 Google launched Google Searchology. In previous years Google focused more on Universal search but with the changes in 2009, the company changed its focus on Personalized search. In December the same year Google released a new feature in their search engine: Google Rich Snippets. The feature allowed extra content to be displayed by the search engine. In order to do that, webmasters had to index their pages using RDFa along with the FOAF and vCard vocabularies.
+				Google went on and further developed their Rich Snippets. Some of the most successful ones were People, Events, Recipes data types. The search engine Yandex was the next to follow and released their own implementation of the Rich Snippets concept called Yandex Enhanced Snippets on the 24th of September 2010. Microsoft also had their own implementation called Bing Rich Captions, which was mainly aimed at the improving the Bing shopping experience. In order to unify different formats in 2010 the initiative for the schema.org vocabulary was launched which was supported by all the listed major search engine providers.
+			</p>
+			<h1>Schema.org</h1>
+			<h2>Overview</h2>
+			<p>
+				Schema.org is a shared vocabulary available in different encoding formats and serves the purpose to provide markup of web content. This facilitates understanding of the content’s meaning by search engines and other applications in order to provide better user experience. The project is sponsored by Google, Microsoft, Yandex and Yahoo!. The goal of schema.org is to provide webmasters with a structured data markup schema supported by major search engines. The community behind the project involves people from the sponsoring companies along with other web community members. The so called steering group plays an essential role as it is responsible for making decisions about future developments and changes to the project and all discussions within that group are made available to the public.
+			</p>
+			<h2>Vocabulary Structure and Use</h2>
+			<p>
+				The Schema.org vocabulary consists of a wide number of item types where each one of them is associated with a number of properties avalable to it. Item types are organised in a hierarchical manner where all item types inherit from the broadest type - Thing. Item types inherit properties from super types and can inherit properties from more than one parent. For example Item type Code has the following type hierarchy: Thing → CreativeWork → Code. Where it inherits attributes specific set of attributes from CreativeWork and Thing. Multiple inheritance can be illustrated from the following example Thing → Organization → LocalBusiness and Thing → Place → LocalBusiness where LocalBusiness inherits properties from Thing, Organization and Place. Full list containing all item types and illustrating their inheritance hierarchy is also available. In addition, for each item type it is possible to track what properties are inherited from parent item types.
+				As a general rule all content on a web page can and is beneficial to be marked up. The only exception being is content which is hidden from the user. Also, some type properties can have expected values, following earlier example a property can have an expected value type of Organization, however all item types which are directly or indirectly inherent to Organization can be specified as well. Text can always be specified even if an expected value for an attribute is supplied.
+				The url item property should be included as part of the markup in cases where a web page consists of a list of items and the list is formed of links to dedicated pages of items.
+				Schema.org markup can also be tested to ensure correct implementation through a range of tools available as web services. Some of the more popular being:
+				<ul>
+					<li>Google Structured Data Testing Tool</li>
+					<li>Yandex Structured Data Testing Tool</li>
+					<li>Bing Markup Validator</li>
+				</ul>
+			</p>
+			<h2>Supported Encodings</h2>
+			<h3>Microdata</h3>
+			<p>
+				As explained in the Overview paragraph there is a huge benefit for search engines and applications when structured markup data is used as it enables the rendering of information in a more relevant way. Microdata is a lightweight semantic meta syntax included as part of HTML 5.
+				Following is a list of microdata attributes and their use:
+				<ul>
+					<li>Itemscope - Placed within the HTML tag which encapsulates data related to a particular item.</li>
+					<li>
+						Itemtype - Identifies the type of the microdata item, the attribute value expected is a URL pointing to the itemtype.
+						<br />
+						Example:
+						<br />
+						<div class="codeblock">
+							<span class="greenText">&lt;div</span> <span class="blueText">itemscope</span> <span class="blueText">itemtype</span>=<span class="redText">“http://schema.org/SportsEvent”</span><span class="greenText">&gt;&lt;/div&gt;</span>
+						</div>
+					</li>
+					<li>Itemproperty - Can be added to an HTML tag where the value for the tag attribute is the property name.
+						<br />
+						Example:
+						<br />
+						<span class="greenText">&lt;div</span> <span class="blueText">itemscope</span> <span class="blueText">itemtype</span>=<span class="redText">“http://schema.org/SportsEvent”</span><span class="greenText">&gt;</span>
+						<br />
+						&nbsp;&lt;h1 itemprop=“name”&gt;The Great Scottish Run 2015&lt;/h1&gt;
+						<br />
+						&nbsp;&lt;span itemprop=“duration”>Between 01:00h - 04:00h&lt;/span&gt;
+						<br />
+						<span class="greenText">&lt;/div&gt;</span>
+					</li>
+					<li>Embedded Items - Such items occur when a property value itself is an item and has its own attributes.
+						<br />
+						Example:
+						<br />
+						&lt;div itemscope itemtype=“http://schema.org/SportsEvent”&gt;
+						<br />
+						&nbsp;&lt;h1 itemprop=“name”&gt;The Great Scottish Run 2015&lt;/h1&gt;
+						<br />
+						&nbsp;&lt;span itemprop=“duration”&gt;Between 01:00h - 04:00h&lt;/span&gt;
+						<br />
+						&nbsp;&lt;span itemprop=“performer” itemscope itemtype=“http://schema.org/Person”&gt;&lt;/span&gt;
+						<br />
+						&lt;/div&gt;
+					</li>
+				</ul>
+				Microdata also provides additional means for further clarifying the values specified for item properties. An example of this is the specification of dates as property values. To disambiguate the date format specification the HTML 5 time tag along with the datetime attributes can be utilised. Enumerators are also included as part of schema.org and are used when a property can only obtain a value from a certain set of values. For example the outcome of a football game can be either Win Home team, draw or Win Away team.Canonical references are used to further describe the content meaning by relating it to another web page where it is mentioned. This is done through the url attribute where the value for the attribute is the link to the other webpage. It should be noted that it is not necessary to provide an actual link which is rendered on your website. To achieve this the link tag can be used which only provides the information to search engines without actually rendering the hyperlink to the webpage. Meta tags can also be used for describing content which does not follow a particular template which is often the case for when images are used. To describe the information presented in the image or within a section of the page this technique can be implemented.
+			</p>
+			<h3>Resource Description Framework in Attributes(RDFa)</h3>
+			<p>
+				
+				Another encoding supported by schema.org is RDFa. The standard is an extention to HTML5 and various XML-based document types to enable encoding of
+				metadata. These attributes are:
+				<ul>
+					<li>about - a URI (Uniform Resource Identifier) or CURIE (Compact URI) specifying the resource the metadata is about;</li>
+					<li>rel and rev - specifying a relationship and reverse-relationship with another resource, respectively;</li>
+					<li>src, href, resource - specifying an external resource;</li>
+					<li>property - specifying a property of the content enclosed within the HTML tags;</li>
+				</ul>
+				
+				Some more optional attributes are:
+				<ul>
+					<li>content - overrides the content of the element when using the property attribute;</li>
+					<li>datatype - specifies the datatype of text specified;</li>
+					<li>typeof - specifies the RDF type(s) of the subject or the partner resource</li>
+				</ul>
+				<br />
+				The benefits of using RDFa are:
+				<ul>
+					<li>Publisher Independence - each web site index the data using its own standard;</li>
+					<li>Data Reuse - the rendered data does not duplicate with the structured data;</li>
+					<li>Self Containment - the HTML is self-contained - it is separated from the RDF;</li>
+					<li>Schema Modularity - the attributes are reusable;</li>
+					<li>Evolability - additional fields can be added and XML transforms can extract the semantics of the data from an XHTML file(RDF/OWL equivelence statements)</li>
+				</ul>
+			</p>
+			<h3>JavaScript Object Notation for Linked Data(JSON-LD)</h3>
+			<p>
+				
+				The third encoding supported by schema.org is JSON-LD. It is a lightweight linked data format. It helps with transporting linked data using JSON. It is designed around the concept of a "context". It tells the application how to interpret the rest of the data. It also specifies the data type for each field. The model also provides additional mappings from JSON to an RDF model. The context links object properties in a JSON document to concepts in an ontology. The JSON-LD code can be written in a sepparate file and referenced in the header of the HTML.
+				<br />
+				Example:
+			</p>
+			<div class="mtabs_wrapper">
+				<!-- Original tabs START -->
+				<div id="mtabs">
+					<ul>
+						<li class="active"><a href="#tab1" rel="tab4">Microdata</a></li>
+						<li><a href="#tab2" rel="tab2">RDFa</a></li>
+						<li><a href="#tab3" rel="tab3">JSON-LD</a></li>
+					</ul>
+				</div>
+				<div id="mtabs_content_container">
+					<div id="tab1" class="mtab_content greenText" style="display: block;">
+						<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+							
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Title&lt;/title&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div itemscope itemtype="http://schema.org/SportsEvent"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 itemprop = "name"&gt;The Great Scottish Run 2015&lt;/h1&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "duration"&gt; Between 01:00h - 04:00h&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "performer" itemscope itemtype="http://schema.org/Person"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;b itemprop="name"&gt;John Doe&lt;/b&gt;&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "startDate"&gt;&lt;time datetime="2011-10-04"&gt;04/10/2015&lt;/time&gt;&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "offers" itemscope itemtype = "http://schema.org/Offer"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "price"&gt;35&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "priceCurrency"&gt;£&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "url"&gt;TBC&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "location" itemscope itemtype="http://schema.org/Place"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "name"&gt;Glasgow Green Glasgow G1 5DB&lt;/span&gt;
+							<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span itemprop = "address"&gt;Glasgow Green Glasgow G1 5DB&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;
+						<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/html&gt;</p>
+					</div>
+					<div id="tab2" class="mtab_content">
+						<p>&lt;div xmlns="http://www.w3.org/1999/xhtml"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;prefix="
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;schema: http://schema.org/
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdfa: http://www.w3.org/ns/rdfa#
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rdfs: http://www.w3.org/2000/01/rdf-schema#"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div typeof="schema:SportsEvent"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:name" content="The Great Scottish Run 2015"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div rel="schema:offers"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div typeof="rdfs:Resource"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:url" content="TBC"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:price" content="35"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:priceCurrency" content=" £"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div rel="schema:location"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div typeof="schema:Place"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:address" content="Glasgow Green Glasgow G1 5DB"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:name" content="Glasgow Green Glasgow G1 5DB"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&lt;div inlist="" rel="schema:performer" resource="N79ce318f1fd4499d97b8c053c0ce3186"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:startDate" content="04/10/2015"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div property="schema:duration" content=" Between 01:00h - 04:00h"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div typeof="rdfs:Resource" about="http://rdf-translator.appspot.com/"&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div rel="rdfa:usesVocabulary" resource="http://schema.org/"&gt;&lt;/div&gt;
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+						<br />&lt;/div&gt;</p>
+					</div>
+					<div id="tab3" class="mtab_content">
+						<p>{
+							<br />&nbsp;&nbsp;&nbsp;&nbsp; "@context": {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "cc": "http://creativecommons.org/ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ctag": "http://commontag.org/ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dc": "http://purl.org/dc/elements/1.1/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dc1": "http://purl.org/dc/terms/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dc11": "http://purl.org/dc/elements/1.1/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dcat": "http://www.w3.org/ns/dcat#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "dcterms": "http://purl.org/dc/terms/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "foaf": "http://xmlns.com/foaf/0.1/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "gr": "http://purl.org/goodrelations/v1#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "grddl": "http://www.w3.org/2003/g/data-view#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "hcalendar": "http://microformats.org/profile/hcalendar#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "hcard": "http://microformats.org/profile/hcard#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ical": "http://www.w3.org/2002/12/cal/icaltzd#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "ma": "http://www.w3.org/ns/ma-ont#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "md": "http://www.w3.org/ns/md#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "og": "http://ogp.me/ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "org": "http://www.w3.org/ns/org#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "owl": "http://www.w3.org/2002/07/owl#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "prov": "http://www.w3.org/ns/prov#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "qb": "http://purl.org/linked-data/cube#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rdfa": "http://www.w3.org/ns/rdfa#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rev": "http://purl.org/stuff/rev#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rif": "http://www.w3.org/2007/rif#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rr": "http://www.w3.org/ns/r2rml#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema": "http://schema.org/",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "sd": "http://www.w3.org/ns/sparql-service-description#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "sioc": "http://rdfs.org/sioc/ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "skos": "http://www.w3.org/2004/02/skos/core#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "skosxl": "http://www.w3.org/2008/05/skos-xl#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "v": "http://rdf.data-vocabulary.org/#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "vcard": "http://www.w3.org/2006/vcard/ns#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "void": "http://rdfs.org/ns/void#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "wdr": "http://www.w3.org/2007/05/powder#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "wdrs": "http://www.w3.org/2007/05/powder-s#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "wdsr": "http://www.w3.org/2007/05/powder-s#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "xhv": "http://www.w3.org/1999/xhtml/vocab#",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "xsd": "http://www.w3.org/2001/XMLSchema#"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp; "@graph": [
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:Nebd6ddf337e14113b3a7ae1bfe98a528",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:price": "35",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:priceCurrency": " £",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:url": "TBC"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:Ne14d8501971f4c06809b6746dd1298a3",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@type": "schema:Place",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:address": "Glasgow Green Glasgow G1 5DB",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:name": "Glasgow Green Glasgow G1 5DB"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:N0d26d7110207456fb2e71fccf4e66665",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@type": "schema:SportsEvent",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:duration": " Between 01:00h - 04:00h",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:location": {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:Ne14d8501971f4c06809b6746dd1298a3"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:name": "The Great Scottish Run 2015",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:offers": {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:Nebd6ddf337e14113b3a7ae1bfe98a528"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:performer": {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@list": [
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:N442b004172ce4709ae9685d255e080df"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:startDate": "04/10/2015"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "rdfa:usesVocabulary": {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "schema:"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@id": "_:N442b004172ce4709ae9685d255e080df",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "@type": "schema:Person",
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "schema:name": "John Doe"
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+							<br />&nbsp;&nbsp;&nbsp;&nbsp;]
+							<br />}
+						</p>
+					</div>
+				</div>
+				<!-- Original tabs END -->
+			</div>
+			<h2>Schema.org and the Semantic Web</h2>
+			<p>
+				Even though the idea of providing structure to data on the internet was initiated 18 years ago a lot of time was required through which a lot of formats and ideas were proposed some of which were further refined and preserved while others were rejected. Through that process only very few websites had actually structured their data, the main drive which changed this was when search engines allowed for the better rendering of search results for webmasters. Examples of such initiatives include: Yahoo Monkey, Google Rich Snippets. This increased the use of structure data, however the wide variety of vocabularies and formats used across different search engines imposed a problem to web developers and masters and still prevented wide adoption. This is the problem which Schema.org was designed to solve, namely provide a standardised vocabulary which could be used across all major search engines. In addition, schema.org aims to provide a vocabulary which is simplified and does not require webmasters to have wide knowledge of Knowledge Representation and other related techniques. The community behind Schema.org decided that it is better to use an incremental approach and release basic version of the vocabulary and let it evolve as per the requirements of the webmasters. Since the initial release the vocabulary has been grown by roughly 600 classes and 800 properties. In conclusion it can be said that schema.org has certainly provided web masters with means for structuring and displaying data in search engines in much more visually pleasing way while keeping the additional effort required to a minimum.
+			</p>
+			<h1>Semantically-Interlinked Online Communities</h1>
+			<h2>Introduction</h2>
+			<p>
+				Nowadays, most people use internet as a primary source of information. Moreover, there is a trend that websites maintained by a community (weblogs, wikis, forums, etc.) are gaining more and more popularity in comparison with traditional news websites. Many users visit such community supported websites on daily basis in search for articles in specific topic or just to get informed with current news. However, due to the heterogeneous nature of the data from such sources, finding, interlinking and querying data within and between social communities is a difficult task. In addition the information on such sites is being kept from sharing and generally lacks machine-readable metadata. A user may find a piece of information on an online community website, without realising that this information is incomplete and that there are a lot more related pieces residing on other similar sites. Overall, most of the Web 2.0 services share this common problem of isolating their data known as data portability. It obscures the extraction of data and its reuse by users and software agents (The SIOC Project).
+			</p>
+			<h2>Data Portability</h2>
+			<p>
+				The idea behind data portability is that we as users want our data (e.g., pictures, blog posts, videos, preferences, etc.) to be shared across all our trusted platforms and services. This concept is very important as without it we can have multiple identities on separate social networks with different sets of friends. In contrast data portability would allow us to import one of our existing profiles and have a single global identity which would be shared across all services that we use. One way to achieve this would be to employ some semantic formats to describe information (e.g., people, content objects and the connection between them) in this way social websites can collaborate with one another following common semantics. Some of the semantic technologies that are currently being used include FOAF, XFN / hCard, SIOC, etc.). In addition object-centred social networks can act as excellent data silos for semantic applications.
+			</p>
+			<h2>Object-centred sociality in online communities</h2>
+			<p>
+				This concept deals with the idea of providing a semantic representation for the decentralised content which can be associated with a user across the Social Web. Centralisation of content can be achieved through a combination of SIOC and FOAF in order to describing user related objects. Specifically, SIOC can be utilised to provide linking between content items and a FOAF profile can unify information about the user's contacts. This then would result in an overall picture of the artefacts created through the activities carried out by the user. It may not always be the case that a user would like all the information centred but would be more interested in transferring information across different social communities. Again this can be achieved through a description of the content from the initial community site which will then be migrated to the new one.
+			</p>
+			<h2>Microformats</h2>
+			<p>
+				Microformats are small patterns of HTML which represent commonly published things. Or in other words it is the information on a website, represented in a machine readable format. They encourage the reuse of property names. However this needs to be carefully done as there are some scoping and namespacing issues (Accepted limitations of microformats):
+				<ul>
+					<li>If a property is tightly defined it is difficult to reuse that property.</li>
+					<li>The more a property is used, the higher the chance of misusing it (interpreting it incorrectly) when multiple Microformats overlap at the same time.</li>
+				</ul>
+			</p>
+			<h2>Structured and semantic blogging</h2>
+			<p>
+				Structured blogging is an attempt to add more information to blog posts so they can be reused by other applications. It aims to create Microformat data from different blogging platforms. Hence structured data about objects is becoming part of blog posts. An advantage of this Microformat data and structured blogging is it can be used as a starting point for getting into web semantics for non-technical people: they simply decide on the type of post they want to create and the semantic data is created in the background.
+				If the structured blogging is about the blog post as a whole, semantic blogging is about the blog post’s content information. It is similar to structured blogging, but uses RDF as a data model and hence is much more flexible.
+			</p>
+			<h2>SIOC</h2>
+			<p>
+				The Semantically-Interlinked Online Communities, or SIOC is a semantic web technology that relies on the RDF (Resource Description Framework) standard, developed by W3C (World Wide Web Consortium). It is based on the use of SIOC ontology, which is an open-standard machine readable format used to describe information contained in online community sites in a simple and extensible way. The work on this semantic web technology project was started in 2004 by John Breslin and Uldis Bojārs at Digital Enterprise Research Institute (DERI), National University of Ireland (NUI) Galway. As of 2007, SIOC is a W3C Member Submission. [http://www.w3.org/Submission/2007/02/]
+				The Semantic Web provides standards and models to build a Web of Data in order to solve the problem of data decentralisation. This leads to the Social Semantic Information Spaces, where information from different social networks, blogs, wikis, etc. is being created and maintained through social interaction but is also kept in a machine readable format.
+				<br />
+				SIOC aims to provide the building blocks for this integration. It attempts to solve the above problem by providing a comprehensive data model to represent social activity in online communities. To achieve this it relies on the SIOC Ontology and a set of applications involved in the production, collection and consumption of SIOC data. These two concepts form the SIOC eco-system.
+			</p>
+			<h2></h2>
+			<p>
+				An eco-system has been created by various SIOC-enabled services. It takes part in the different stages of the SIOC information lifecycle (Reference). As it is wrapped around an ontology, the eco-system bypasses the problem of chicken and egg. In short the problem relates that data source providers do not provide metadata through ontologies unless clear benefit from it is apparent. Without metadata, no semantic functionality can be achieved. In contrast SIOC provides the means to present data in a rich, interconnected fashion. This has the potential to scale well with various browsers and applications that can take advantage of this information. An opportunity which leads to the so called “SIOC food chain” consisting of tools that generate SIOC data and tools that browse and reuse this data. Producers of SIOC data include exporters, queryable APIs, applications that can natively store semantic data and schema mapping tools that generate SIOC data. The data from these tools can be either collected in an intermediate step or consumed by another application. Collectors include Semantic Web spiders or crawlers designed to gather SIOC data from different sources and store it in a single place. Consumers include generic browsers for RDF data or custom extensions for browsers designed to display SIOC data.
+				<br />
+				To promote the use of SIOC some initial so called “seed” applications covering key areas of the ecosystem have been developed. Some of these include the WordPress SIOC export plugin, the Semantic Radar extension for Firefox and various other applications for exploring SIOC data.
+			</p>
+			<h2>SIOC Core Ontology Vocabulary</h2>
+			<p>
+				The SIOC ontology uses terms to describe content in web pages. They can be grouped in two categories – classes (concepts) and properties (attributes).
+			</p>
+			<h3>Classes</h3>
+			<p>
+				sioc:Community – a high-level representation of the community concept. It describes a set of objects (sites, people, etc.) linked together by a common interest or topic. The Community class can by related to many sites, while a single site belongs to a particular Community.
+				<br /><br />
+				sioc:Container – this class groups together instances of Items. An Item is related to a Container via the
+				<br /><br />
+				sioc:has_container property, whilst Container groups many Items with sioc:container_of. A Container is a super class of Forum (one of the core classes in the SIOC ontology).
+				sioc:Forum – a discussion area or channel hosted by a Site, where users create Posts. A Forum is organised around a certain topic and may have a set of UserAccounts subscribed to it. One of these UserAccounts is the moderator of the Forum, who is responsible for managing its content and has the power to veto or edit a Post. One Forum can be related to another via sioc:has_parent relationship, in that way a hierarchy structure is created.
+				<br /><br />
+				sioc:Item – a part of Container and a super class of Post.
+				<br /><br />
+				sioc:Post – the building block of the Forum class. It is a message created by UserAccount and posted to a specific Forum. One Post can be related to another via sioc:has_reply to create a Thread of messages, where UserAccounts discuss a topic.
+				<br /><br />
+				sioc:Role – describes the function of a UserAccount and its privileges. A Role can be a Forum moderator or a Site
+				administrator.
+				<br /><br />
+				sioc:Site – subclass of Space, that hosts a set of Forums used for discussions by an online community.
+				<br /><br />
+				sioc:Space – represents a location where data resides. A Container is linked to Space with sioc:has_space relationship.
+				<br /><br />
+				sioc:Thread – defines a conversation within a Forum, which has a collection of Posts created by UserAccounts. Usually Posts are ordered chronologically from oldest to latest and a single UserAccount can post multiple messages within a Thread.
+				<br /><br />
+				sioc:UserAccount – describes a membership of a user to an online community. Each user via its UserAccount is able to create or edit Posts in a Thread. All UserAccounts can subscribe to a Forum, whereas Roles like moderator or administrator have higher privileges. Moderators are responsible for delegating content in Forums, while administrators can promote UserAccounts to moderators and manage topics included in the online community. UserAccounts can be grouped in UserGroups with different levels of access and rights.
+				A UserAccount belongs to a single foaf:Person type, whilst one foaf:Person can have many UserAccounts. UserAccount is used to represent the attributes of an account in an online community and foaf:Person adds additional information about the individual itself.
+				<br /><br />
+				sioc:Usergroup – a collection of UserAccounts, which can based on either interest in a certain topic (Thread) or the Role members of the group have (e.g. moderator, administrator).
+			</p>
+			<h3>Main Properties</h3>
+			<p>
+				The main properties used to describe the relationships between classes are listed below. They help to extract the meaning from community sites.
+				<br /><br />
+				sioc:has_container – links an instance of Item to the Container it belongs.
+				<br /><br />
+				sioc:has_creator – refers to the UserAccount that created an Item. This property enables to follow the link from an Item to its author, thus other resources created by the same UserAccount can be located/identified.
+				<br /><br />
+				sioc:has_function – represents the Role an UserAccount has. A UserAccount can have different rights/permissions/privileges in different Forums.
+				<br /><br />
+				sioc:has_host – links a Forum to the Site it resides in.
+				<br /><br />
+				sioc:has_member – describes the relationship between a Usergroup and an instance of its members.
+				<br /><br />
+				sioc:has_parent – a Container/Forum can have a parent Container/Forum.
+				<br /><br />
+				sioc:has_reply – an Item/Post can be created as a reply to another Item/Post. Thus, a tree-like structure is formed to present a series of Items/Posts under the same topic.
+				<br /><br />
+				sioc:has_scope – points to the Forum that a Role has privileges on.
+				<br /><br />
+				sioc:has_space – describes the Space where data resides in.
+				<br /><br />
+				sioc:topic – this property can be applied to the most of the classes building the SIOC ontology. Its metadata is used to match documents and people to each other.
+				It may not be possible a UserAccount to assign a topic to an Item when it is created, however a Container will usually have one selected that will also apply to all associated Items it has. Moreover, when a UserAccount or Usergroup are generated they can pick topics of interest to be included in their profiles. This way, Forums that match these topic of interest can be suggested to the UserAccount or UserGroup.
+			</p>
+		</div>
+		<script>
+			$(function() {
+				var y = null;
+				var e = 0;
+				$(window).scroll(function() {
+					y = $(window).scrollTop();
+					if (y > e) {
+						$('header').addClass('stick');
+					} else {
+						$('header').removeClass('stick');
+					}
+				});
+			});
+			$(document).ready(function() {
+				//  When user clicks on tab, this code will be executed
+				$("#mtabs li").click(function() {
+					//  First remove class "active" from currently active tab
+					$("#mtabs li").removeClass('active');
+					//  Now add class "active" to the selected/clicked tab
+					$(this).addClass("active");
+					//  Hide all tab content
+					$(".mtab_content").hide();
+					//  Here we get the href value of the selected tab
+					var selected_tab = $(this).find("a").attr("href");
+					//  Show the selected tab content
+					$(selected_tab).fadeIn();
+					//  At the end, we add return false so that the click on the link is not executed
+					return false;
+				});
+				$("#simulate").click(function() {
+					$('a[rel="tab2"]').trigger("click");
+				});
+				function colorizeText(div, litsOfWords, color) {
+					for (var i = litsOfWords.length - 1; i >= 0; i--) {
+						var stringToReplace = "<span class=\"" + color + "\">" + litsOfWords[i] + "</span>";
+						var searchMask = litsOfWords[i];
+						var regEx = new RegExp(searchMask, "g");
+						var newHTML = div[0].innerHTML.replace(regEx, stringToReplace);
+						div[0].innerHTML = newHTML;
+					}
+				}
+				colorizeText(document.getElementsByClassName('mtab_content'), ["itemprop", "itemscope", "itemtype", "datetime", "xmlns", "lang", "xml:lang"], "blueText");
+				colorizeText(document.getElementsByClassName('mtab_content'), ["name", "duration", "performer", "startDate", "offers", "price", "priceCurrency", "url", "address", "location", "http://schema.org/SportsEvent", "http://schema.org/Offer", "http://schema.org/Place", "http://schema.org/Person", "2011-10-04", "http://www.w3.org/1999/xhtml", "\"en\""], "redText");
+				colorizeText(document.getElementsByClassName('mtab_content'), ["!DOCTYPE html PUBLIC ", "-//W3C//DTD XHTML 1.0 Strict//EN", "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd", "Title", "The Great Scottish Run 2015", "Between 01:00h - 04:00h", "John Doe", "04/10/2015", "35", "£", "TBC", "Glasgow Green Glasgow G1 5DB"], "blackText");
+			});
+		</script>
+	</body>
+</html>
+<!-- References
+http://googlewebmastercentral.blogspot.co.uk/2009/10/help-us-make-web-better-update-on-rich.html
+-->
