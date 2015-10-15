@@ -19,21 +19,44 @@
 	color: #a11;
 }
 
+.oneTab {
+	margin-left: 18px;
+}
+.twoTab {
+	margin-left: 36px;
+}
+.threeTab {
+	margin-left: 54px;
+}
+.fourTab {
+	margin-left: 72px;
+}
+.fiveTab {
+	margin-left: 90px;
+}
+.sixTab {
+	margin-left: 108px;
+}
 /* style for navigation bar  */
 header {
 	width: 100%;
+	position: fixed;
 }
 
 .stick {
 	position: fixed;
-	opacity: 0.9;
+	
 }
 
 .textarea {
 	padding: 70px 100px;
 	text-align: justify;
 }
-
+.fill{
+	height: 80px;
+	width: 1px;
+	position: relative;
+}
 .title {
 	background-color: #990000;
 	width: 100%;
@@ -132,14 +155,20 @@ header {
 	float: left;
 	position: relative;
 	left: 50%;
-	width: 140px;
+	width: 200px;
 	line-height: 50px;
 	font-size: 20px;
 	font-weight: bold;
 	color: #FFF;
+	border: 2px solid #660000;
+	border-top: 0px;
 }
 
-#centeredmenu ul li:hover {
+#centeredmenu ul li ul li:first-child {
+	border-top: 2px solid #660000;
+}
+
+#centeredmenu>ul li:hover {
 	background: #FFF; /* Top menu items background colour */
 	color: #660000;
 	cursor: pointer;
@@ -149,11 +178,12 @@ header {
 #centeredmenu ul ul {
 	display: none; /* Sub menus are hiden by default */
 	position: absolute;
-	background-color: #E8E8E8;
+	background-color: #a11;
 	top: 2em;
 	left: 0;
 	right: auto; /*resets the right:50% on the parent ul */
-	width: 10em; /* width of the drop-down menus */
+	width: 198px; /* width of the drop-down menus */
+	
 }
 
 #centeredmenu ul ul li {
