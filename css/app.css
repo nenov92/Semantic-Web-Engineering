@@ -159,8 +159,7 @@ header {
 	color: #000;
 	font-family: Artifika, serif;
 	background-color: #eeeeee;
-	font-size: 14px;    /*border-bottom: 1px solid #ccc;
-		    outline: none;*/
+	font-size: 14px;
 	border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-top-left-radius: 5px;
