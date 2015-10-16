@@ -41,7 +41,7 @@
 							<li onclick="scrollMe('#blog')">Semantic blogging</li>
 						</ul>
 					</li>
-					<li>Conclusion</li>
+					<li onclick="scrollMe('#conclusion')">Conclusion</li>
 					<li>References</li>
 				</ul>
 			</div>
@@ -65,8 +65,8 @@
 			</p>
 			<h2 id="vocab">Vocabulary Structure and Use</h2>
 			<p>
-				The Schema.org vocabulary consists of a wide number of item types where each one of them is associated with a number of properties avalable to it. Item types are organised in a hierarchical manner where all item types inherit from the broadest type - Thing. Item types inherit properties from super types and can inherit properties from more than one parent. For example Item type Code has the following type hierarchy: Thing → CreativeWork → Code. Where it inherits a combined set of attributes from CreativeWork and Thing item types. Multiple inheritance can be illustrated from the following example Thing → Organization → LocalBusiness and Thing → Place → LocalBusiness where LocalBusiness inherits properties from Thing, Organization and Place. Full list containing all item types and illustrating their inheritance hierarchy is also available as part of the schema.org website. In addition, for each item type it is possible to track what properties are inherited from parent item types.
-				As a general rule all content on a web page can and is beneficial to be marked up. The only exception being is content which is hidden from the user. Also, some type properties can have expected values, following the previous example a property can have an expected value type of Organization, however all item types which are directly or indirectly inherent to Organization can be specified as well. In addition, text form value can always be specified even if the expected value for an attribute is supplied.
+				The Schema.org vocabulary consists of a wide number of item types where each one of them is associated with a number of properties avalable to it. Item types are organised in a hierarchical manner where all item types inherit from the root type - Thing. Item types inherit properties from super types and can inherit properties from more than one parent. For example Item type Code has the following type hierarchy: Thing → CreativeWork → Code. Where it inherits a combined set of attributes from CreativeWork and Thing item types. Multiple inheritance can be illustrated by the following example Thing → Organization → LocalBusiness and Thing → Place → LocalBusiness where LocalBusiness inherits properties from Thing, Organization and Place. Full list containing all item types and illustrating their inheritance hierarchy is also available as part of the schema.org website. In addition, for each item type it is possible to track what properties are inherited from parent item types.
+				Also, some type properties can have expected values, following the previous example a property can have an expected value type of Organization, however all item types which are directly or indirectly inherent to Organization can be specified as well. In addition, text form value can always be specified even if the expected value for an attribute is supplied.
 				The url item property should be included as part of the markup in cases where a web page consists of a list of items and the list is formed of links to dedicated pages of items.
 				Schema.org markup can also be tested to ensure correct implementation through a range of tools available as web services. Some of the more popular being:
 				<ul>
@@ -74,11 +74,14 @@
 					<li>Yandex Structured Data Testing Tool</li>
 					<li>Bing Markup Validator</li>
 				</ul>
+				<p>
+					As a general rule all content on a web page can and is beneficial to be marked up. The only exception being is content which is hidden from the user. A study conducted by Searchmetrics which is a leading company in search engine optimisation concluded that web pages which utilise schema.org get better ranking. On average such web pages get 4 positions better ranking than other websites. The study also explains that even though a direct causal relationship cannot be confirmed it is the case that pages which implement content markup are usually supported by more knowledgeable webmasters. Thus the usage of the vocabulary can be identified as a correct practice to be followed. In addition, much better visual presentation within search engine result pages often leads to more user satisfaction and thus indirectly influencing page ranking in a positive way.
+				</p>
 			</p>
 			<h2 id="encodings">Supported Encodings</h2>
 			<h3>Microdata</h3>
 			<p>
-				As explained in the Overview paragraph there is a huge benefit for search engines and applications when structured markup data is used as it enables the rendering of information in a more relevant way. Microdata is a lightweight semantic meta syntax included as part of HTML 5.
+				As explained in the Overview paragraph there is a huge benefit for search engines and applications when structured markup data is used as it enables the rendering of information in a more relevant way. Microdata is a lightweight semantic meta syntax included as part of HTML5.
 				Following is a list of microdata attributes and their use:
 				<ul>
 					<li>Itemscope - Placed within the HTML tag which encapsulates data related to a particular item.</li>
@@ -122,7 +125,7 @@
 					</li>
 				</ul>
 			</p>
-			Microdata also provides additional means for further clarifying the values specified for item properties. An example of this is the specification of dates as property values. To disambiguate the date format specification the HTML 5 time tag along with the datetime attributes can be utilised. Enumerators are also included as part of schema.org and are used when a property can only obtain a value from a certain value set . For example the outcome of a football game can be either Win Home team, draw or Win Away team.Canonical references are used to further describe content meaning by relating it to another web page where it is mentioned. This is done through the url attribute where the value for the attribute is the link to the other webpage. It should be noted that it is not necessary to provide an actual link which is rendered on your website. To achieve this the link tag can be used which only provides information to search engines without actually rendering the hyperlink to the webpage. Meta tags can also be used for describing content which does not follow a particular template, that is often the case when images are used. To describe the information presented in the image or within a section of the page meta data can be provided.
+				Microdata also provides additional means for further clarifying the values specified for item properties. An example of this is the specification of dates as property values. To disambiguate the date format specification the HTML5 time tag along with the datetime attributes can be utilised. Enumerators are also included as part of schema.org and are used when a property can only obtain a value from a certain value set. For example the outcome of a football game can be either Win Home team, draw or Win Away team. Canonical references are used to further describe content meaning by relating it to another web page where it is mentioned. This is done through the url attribute where the value for the attribute is the link to the other webpage. It should be noted that it is not necessary to provide an actual link which is rendered on your website. To achieve this the link tag can be used which only provides information to search engines without actually rendering the hyperlink to the webpage. Meta tags can also be used for describing content which does not follow a particular template, that is often the case when images are used. To describe the information presented in the image or within a section of the page meta data can be provided.
 			<h3>Resource Description Framework in Attributes (RDFa)</h3>
 			<p>
 				
@@ -143,17 +146,17 @@
 				</ul>
 				The benefits of using RDFa are:
 				<ul>
-					<li>Publisher Independence - each web site index the data using its own standard</li>
+					<li>Publisher Independence - each web site indexes data using its own standard</li>
 					<li>Data Reuse - the rendered data does not duplicate with the structured data</li>
 					<li>Self Containment - the HTML is self-contained - it is separated from the RDF</li>
 					<li>Schema Modularity - the attributes are reusable</li>
-					<li>Evolvability - additional fields can be added and XML transforms can extract the semantics of the data from an XHTML file(RDF/OWL equivelence statements)</li>
+					<li>Evolvability - additional fields can be added and XML transforms can extract the semantics of the data from an XHTML file (RDF/OWL equivelence statements)</li>
 				</ul>
 			</p>
 			<h3>JavaScript Object Notation for Linked Data(JSON-LD)</h3>
 			<p>
 				
-				The third encoding supported by schema.org is JSON-LD. It is a lightweight linked data format and helps transporting linked data through JSON. Designed around the concept of "context" it instructs applications how to interpret human readable content. In addition, a mapping between JSON and the RDF model can be performed. The Context keyword links object properties in a JSON document to concepts in an ontology. JSON-LD code can be written in a separate file and referenced in the header tag of the HTML document.
+				The third encoding supported by schema.org is JSON-LD. It is a lightweight linked data format and helps transporting linked data through JSON. Designed around the concept of "context" it instructs applications how to interpret human readable content. In addition, a mapping between JSON and the RDF model can be performed. The "context" keyword links object properties in a JSON document to concepts in an ontology. JSON-LD code can be written in a separate file and referenced in the header tag of the HTML document.
 				<br />
 				<h3>Schema.org Encodings Example</h3>
 			</p>
@@ -321,8 +324,7 @@
 					</div>
 					<!-- Original tabs END -->
 				</div>
-				
-				<h2 id="relation">Schema.org and the Semantic Web</h2>
+			<h2 id="relation">Schema.org and the Semantic Web</h2>
 				<p>
 					Even though the idea of providing structure to data on the internet was initiated in the 1990s a lot of time was required through which different ideas and formats were proposed some of which were further refined and preserved while others got rejected. Through that process only a few websites had actually provided structure to their data. The main drive which changed this started when search engines allowed for the better rendering of search results for webmasters. This increased the use of structure data, however the wide variety of vocabularies and formats used across different search engines imposed a problem to web developers and still prevented wide adoption. This is the problem which Schema.org was designed to solve, namely to provide a standardised vocabulary which could be used across all major search engines. In addition, schema.org aims to provide a vocabulary which is simplified and does not require webmasters to have wide knowledge of Knowledge Representation and other related techniques and concepts. The community behind Schema.org decided that it is better to use an incremental approach and release basic version of the vocabulary and let it evolve as per the requirements of the webmasters. A confirmation of this is the fact that since the initial release the vocabulary has grown by around 600 classes and 800 properties. In conclusion, it can be said that schema.org has provided web masters with means for structuring and displaying data in much more visually pleasing way while keeping the additional effort required to a minimum.
 				</p>
@@ -345,7 +347,7 @@
 			</p>
 			<h2 id="data">Data Portability</h2>
 			<p>
-				The idea behind data portability is that we as users want our data (e.g., pictures, blog posts, videos, preferences, etc.) to be shared across all our trusted platforms and services. This concept is very important as without it we can have multiple identities on separate social networks with different sets of friends. In contrast data portability would allow us to import one of our existing profiles and have a single global identity which would be shared across all services that we use. One way to achieve this would be to employ semantic formats to describe information (e.g., people, content objects and the connection between them) in this way social websites can collaborate with one another following common semantics. Some of the semantic technologies that are currently being used include FOAF, XFN / hCard, SIOC, etc.). In addition object-centred social networks can act as excellent data silos for semantic applications.
+				The idea behind data portability is that we as users want our data (e.g., pictures, blog posts, videos, preferences, etc.) to be shared across all our trusted platforms and services. This concept is very important as without it we can have multiple identities on separate social networks with different sets of friends. In contrast data portability would allow us to import one of our existing profiles and have a single global identity which would be shared across all services that we use. One way to achieve this would be to employ semantic formats to describe information (e.g., people, content objects and the connection between them) in this way social websites can collaborate with one another following common semantics. Some of the semantic technologies that are currently being used include FOAF, XFN / hCard, SIOC, etc. In addition object-centred social networks can act as excellent data silos for semantic applications.
 			</p>
 			<h2>Object-centred sociality in online communities</h2>
 			<p>
@@ -446,6 +448,7 @@
 				sioc:topic – this property can be applied to the most of the classes building the SIOC ontology. Its metadata is used to match documents and people to each other.
 				It may not be possible a UserAccount to assign a topic to an Item when it is created, however a Container will usually have one selected that will also apply to all associated Items it has. Moreover, when a UserAccount or Usergroup are generated they can pick topics of interest to be included in their profiles. This way, Forums that match these topic of interest can be suggested to the UserAccount or UserGroup.
 			</p>
+<<<<<<< HEAD
 			<h3>SIOC Core Ontology Structure</h3>
 			<p>
 				The core ontology defines the main concepts needed to describe information from the online communities on the Semantic Web.Its structure can be presented by a graph of relationships between the classes building it. The main terms are shown below.
@@ -453,6 +456,12 @@
 			<img src="images/sioc_classes_properties.png" />
 			<br />
 			<span>Figure N: SIOC Core Ontology Structure</span>
+=======
+			<h2 id="conclusion">Conclusion</h2>
+			<p>
+				Overall in 2013 an average of 15 % (5 000 000) web pages did implement semantic content markup, as of this year the number has risen to 10 000 000. The positive trend can be attributed to task specific and easy to implement vocabularies like SIOC and schema.org which were examined in the report. As explained earlier the ability to achieve better search engine result page rankings or to get all person related content from a social community can be highly valuable nowadays. In addition, a combined effort including SIOC can result in a complete amalgamation of social content for a person across different community platforms, which can later be trended and analysed. In terms of the schema.org vocabulary the fact that it is a combined project between competing search engine service providers aiming to supply developers with an easy to implement product goes to show that the identified trend in the begining of the paragraph is likely to be continued in upcoming years. In conclusion, wider adoption of semantic content through different vocabularies and techniques results in more Web 3.0 functionalities being made available to both webmasters and users. 
+			</p>
+>>>>>>> origin/master
 		</div>
 		<script>
 			$(function() {
@@ -519,5 +528,9 @@
 </html>
 <!-- References
 http://googlewebmastercentral.blogspot.co.uk/2009/10/help-us-make-web-better-update-on-rich.html
+<<<<<<< HEAD
 [http://www.w3.org/Submission/2007/02/]
 -->
+=======
+-->
+>>>>>>> origin/master
