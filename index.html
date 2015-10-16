@@ -328,11 +328,15 @@
 				</p>
 				<h1 id="sioc">Semantically-Interlinked Online Communities</h1>
 				<h2 id="intro">Introduction</h2>
-				<p>Nowadays, most people use internet as a primary source of information. Moreover, there is a trend that websites maintained by a community (weblogs, wikis, forums, etc.) are gaining more and more popularity in comparison with traditional news websites. Many users visit such community supported websites on daily basis in search for articles in specific topic or just to get informed with current news. However, due to the heterogeneous nature of the data from such sources, finding, interlinking and querying data within and between social communities is a difficult task. In addition the information on such sites is being kept from sharing and generally lacks machine-readable metadata. A user may find a piece of information on an online community website, without realising that this information is incomplete and that there are a lot more related pieces residing on other similar sites. Overall, most of the Web 2.0 services share this common problem of isolating their data known as data portability. It obscures the extraction of data and its reuse by users and software agents (The SIOC Project).</p>
-				<p>The Semantically-Interlinked Online Communities, or SIOC is a semantic web technology that relies on the RDF (Resource Description Framework) standard, developed by W3C (World Wide Web Consortium). It is based on the use of SIOC ontology, which is an open-standard machine readable format used to describe information contained in online community sites in a simple and extensible way. The work on this semantic web technology project was started in 2004 by John Breslin and Uldis Bojārs at Digital Enterprise Research Institute (DERI), National University of Ireland (NUI) Galway. As of 2007, SIOC is a W3C Member Submission. [http://www.w3.org/Submission/2007/02/]
+				<p>
+					Nowadays, most people use internet as a primary source of information. Moreover, there is a trend that websites maintained by a community (weblogs, wikis, forums, etc.) are gaining more and more popularity in comparison with traditional news websites. Many users visit such community supported websites on daily basis in search for articles in specific topic or just to get informed with current news. However, due to the heterogeneous nature of the data from such sources, finding, interlinking and querying data within and between social communities is a difficult task. In addition the information on such sites is being kept from sharing and generally lacks machine-readable metadata. A user may find a piece of information on an online community website, without realising that this information is incomplete and that there are a lot more related pieces residing on other similar sites. Overall, most of the Web 2.0 services share this common problem of isolating their data known as data portability. It obscures the extraction of data and its reuse by users and software agents (The SIOC Project).
+				</p>
+				<p>
+					The Semantically-Interlinked Online Communities, or SIOC is a semantic web technology that relies on the RDF (Resource Description Framework) standard, developed by W3C (World Wide Web Consortium). It is based on the use of SIOC ontology, which is an open-standard machine readable format used to describe information contained in online community sites in a simple and extensible way. The work on this semantic web technology project was started in 2004 by John Breslin and Uldis Bojārs at Digital Enterprise Research Institute (DERI), National University of Ireland (NUI) Galway. As of 2007, SIOC is a W3C Member Submission.
 					The Semantic Web provides standards and models to build a Web of Data in order to solve the problem of data decentralisation. This leads to the Social Semantic Information Spaces, where information from different social networks, blogs, wikis, etc. is being created and maintained through social interaction but is also kept in a machine readable format.
 					SIOC aims to provide the building blocks for this integration. It attempts to solve the above problem by providing a comprehensive data model to represent social activity in online communities. To achieve this it relies on the SIOC Ontology and a set of applications involved in the production, collection and consumption of SIOC data. These two concepts form the SIOC eco-system.
 				</p>
+				<h2 id="eco">SIOC eco-system (SIOC food chain)</h2>
 				<p>
 					An eco-system has been created by various SIOC-enabled services. It takes part in the different stages of the SIOC information lifecycle (Reference). As it is wrapped around an ontology, the eco-system bypasses the problem of chicken and egg. In short the problem relates that data source providers do not provide metadata through ontologies unless clear benefit from it is apparent. Without metadata, no semantic functionality can be achieved. In contrast SIOC provides the means to present data in a rich, interconnected fashion. This has the potential to scale well with various browsers and applications that can take advantage of this information. An opportunity which leads to the so called “SIOC food chain” consisting of tools that generate SIOC data and tools that browse and reuse this data. Producers of SIOC data include exporters, queryable APIs, applications that can natively store semantic data and schema mapping tools that generate SIOC data. The data from these tools can be either collected in an intermediate step or consumed by another application. Collectors include Semantic Web spiders or crawlers designed to gather SIOC data from different sources and store it in a single place. Consumers include generic browsers for RDF data or custom extensions for browsers designed to display SIOC data.
 					<br />
@@ -442,6 +446,13 @@
 				sioc:topic – this property can be applied to the most of the classes building the SIOC ontology. Its metadata is used to match documents and people to each other.
 				It may not be possible a UserAccount to assign a topic to an Item when it is created, however a Container will usually have one selected that will also apply to all associated Items it has. Moreover, when a UserAccount or Usergroup are generated they can pick topics of interest to be included in their profiles. This way, Forums that match these topic of interest can be suggested to the UserAccount or UserGroup.
 			</p>
+			<h3>SIOC Core Ontology Structure</h3>
+			<p>
+				The core ontology defines the main concepts needed to describe information from the online communities on the Semantic Web.Its structure can be presented by a graph of relationships between the classes building it. The main terms are shown below.
+			</p>
+			<img src="images/sioc_classes_properties.png" />
+			<br />
+			<span>Figure N: SIOC Core Ontology Structure</span>
 		</div>
 		<script>
 			$(function() {
@@ -472,11 +483,9 @@
 					//  At the end, we add return false so that the click on the link is not executed
 					return false;
 				});
-				
 				$("#simulate").click(function() {
 					$('a[rel="tab2"]').trigger("click");
 				});
-
 				function colorizeText(div, litsOfWords, color) {
 					if (div.length) {
 						for (var j = div.length - 1; j >= 0; j--) {
@@ -501,7 +510,6 @@
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["itemprop", "itemscope", "itemtype", "datetime", "xmlns", "lang", "xml:lang"], "blueText");
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["name", "duration", "performer", "startDate", "offers", "price", "priceCurrency", "url", "address", "location", "http://schema.org/SportsEvent", "http://schema.org/Offer", "http://schema.org/Place", "http://schema.org/Person", "2011-10-04", "http://www.w3.org/1999/xhtml", "\"en\""], "redText");
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["!DOCTYPE html PUBLIC ", "-//W3C//DTD XHTML 1.0 Strict//EN", "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd", "The Great Scottish Run 2015", "Between 01:00h - 04:00h", "John Doe", "04/10/2015", "35", "£", "TBC", "Example", "Glasgow Green Glasgow G1 5DB"], "blackText");
-
 				colorizeText(document.getElementsByClassName("codeblock"), ["itemprop", "itemscope", "itemtype"], "blueText");
 				colorizeText(document.getElementsByClassName("codeblock"), ["name", "duration", "performer", "http://schema.org/SportsEvent", "http://schema.org/Person"], "redText");
 				colorizeText(document.getElementsByClassName("codeblock"), ["The Great Scottish Run 2015", "Between 01:00h - 04:00h"], "blackText");
@@ -511,4 +519,5 @@
 </html>
 <!-- References
 http://googlewebmastercentral.blogspot.co.uk/2009/10/help-us-make-web-better-update-on-rich.html
+[http://www.w3.org/Submission/2007/02/]
 -->
