@@ -42,7 +42,7 @@
 						</ul>
 					</li>
 					<li onclick="scrollMe('#conclusion')">Conclusion</li>
-					<li onclick="scrollMe('#references')">References</li>
+					<li>References</li>
 				</ul>
 			</div>
 		</header>
@@ -158,9 +158,10 @@
 				
 				The third encoding supported by schema.org is JSON-LD. It is a lightweight linked data format and helps transporting linked data through JSON. Designed around the concept of "context" it instructs applications how to interpret human readable content. In addition, a mapping between JSON and the RDF model can be performed. The "context" keyword links object properties in a JSON document to concepts in an ontology. JSON-LD code can be written in a separate file and referenced in the header tag of the HTML document.
 				<br />
-				<h3>Schema.org Encodings Example and Validation</h3>
+				<h3>Schema.org Encodings Example</h3>
 			</p>
 			<div class="mtabs_wrapper">
+				<!-- Original tabs START -->
 				<div id="mtabs">
 					<ul>
 						<li class="active"><a href="#tab1" rel="tab4">Microdata</a></li>
@@ -322,16 +323,15 @@
 						</div>
 					</div>
 					<br />
-					<p>The example has been validated using three different validators. For the microdata we used Google's Structured Data Testing Tool</p>
-					<img src="images/microdataSS.jpg" alt="Mircodata Validation" />
+					<img src="images/microdataSS.jpg" alt="Mircodata Validation" class="centered" />
+					<div align="center"> <b>Figure 1: Microdata markup validated with Google's Structured Data Testing Tool</b></div>
 					<br />
 					<br />
-					<p> For the RDFa we used W3C's validator. </p>
-					<img src="images/rdfaSS.jpg" alt="RDFa Validation" />
+					<img src="images/rdfaSS.jpg" alt="RDFa Validation" class="centered" />
+					<div align="center"><b>Figure 2: RDFa markup validated with W3C's Validator</b></div>
 					<br />
-					<br />
-					<p> It was difficult to find a JSON-LD validator so we used Google's Email Markup Tester.</p>	
-					<img src ="images/jsonSS.jpg" alt="JSON-LD Validation" />
+					<img src ="images/jsonSS.jpg" alt="JSON-LD Validation" class="centered" />
+					<div align="center"><b>Figure 3: JSON-LD markup validated with Google's Email Markup Tester</b></div>
 				</div>
 			<h2 id="relation">Schema.org and the Semantic Web</h2>
 				<p>
@@ -339,17 +339,24 @@
 				</p>
 				<h1 id="sioc">Semantically-Interlinked Online Communities</h1>
 				<h2 id="intro">Introduction</h2>
-				<p>Nowadays, most people use internet as a primary source of information. Moreover, there is a trend that websites maintained by a community (weblogs, wikis, forums, etc.) are gaining more and more popularity in comparison with traditional news websites. Many users visit such community supported websites on daily basis in search for articles in specific topic or just to get informed with current news. However, due to the heterogeneous nature of the data from such sources, finding, interlinking and querying data within and between social communities is a difficult task. In addition the information on such sites is being kept from sharing and generally lacks machine-readable metadata. A user may find a piece of information on an online community website, without realising that this information is incomplete and that there are a lot more related pieces residing on other similar sites. Overall, most of the Web 2.0 services share this common problem of isolating their data known as data portability. It obscures the extraction of data and its reuse by users and software agents (The SIOC Project).</p>
-				<p>The Semantically-Interlinked Online Communities, or SIOC is a semantic web technology that relies on the RDF (Resource Description Framework) standard, developed by W3C (World Wide Web Consortium). It is based on the use of SIOC ontology, which is an open-standard machine readable format used to describe information contained in online community sites in a simple and extensible way. The work on this semantic web technology project was started in 2004 by John Breslin and Uldis Bojārs at Digital Enterprise Research Institute (DERI), National University of Ireland (NUI) Galway. As of 2007, SIOC is a W3C Member Submission. [http://www.w3.org/Submission/2007/02/]
+				<p>
+					Nowadays, most people use internet as a primary source of information. Moreover, there is a trend that websites maintained by a community (weblogs, wikis, forums, etc.) are gaining more and more popularity in comparison with traditional news websites. Many users visit such community supported websites on daily basis in search for articles in specific topic or just to get informed with current news. However, due to the heterogeneous nature of the data from such sources, finding, interlinking and querying data within and between social communities is a difficult task. In addition the information on such sites is being kept from sharing and generally lacks machine-readable metadata. A user may find a piece of information on an online community website, without realising that this information is incomplete and that there are a lot more related pieces residing on other similar sites. Overall, most of the Web 2.0 services share this common problem of isolating their data known as data portability. It obscures the extraction of data and its reuse by users and software agents (The SIOC Project).
+				</p>
+				<p>
+					The Semantically-Interlinked Online Communities, or SIOC is a semantic web technology that relies on the RDF (Resource Description Framework) standard, developed by W3C (World Wide Web Consortium). It is based on the use of SIOC ontology, which is an open-standard machine readable format used to describe information contained in online community sites in a simple and extensible way. The work on this semantic web technology project was started in 2004 by John Breslin and Uldis Bojārs at Digital Enterprise Research Institute (DERI), National University of Ireland (NUI) Galway. As of 2007, SIOC is a W3C Member Submission.
 					The Semantic Web provides standards and models to build a Web of Data in order to solve the problem of data decentralisation. This leads to the Social Semantic Information Spaces, where information from different social networks, blogs, wikis, etc. is being created and maintained through social interaction but is also kept in a machine readable format.
 					SIOC aims to provide the building blocks for this integration. It attempts to solve the above problem by providing a comprehensive data model to represent social activity in online communities. To achieve this it relies on the SIOC Ontology and a set of applications involved in the production, collection and consumption of SIOC data. These two concepts form the SIOC eco-system.
 				</p>
+<<<<<<< HEAD
 				<img src="images/siocIntro.jpg" alt="Social Semantic Intormation Spaces" class="centered" />
+				<div align="center"><b>Figure 4: Social Semantic Intormation Space</b></div>
 				<br />
 				<p>
 					An eco-system has been created by various SIOC-enabled services. It takes part in the different stages of the SIOC information lifecycle (Reference). As it is wrapped around an ontology, the eco-system bypasses the problem of chicken and egg. In short the problem relates that data source providers do not provide metadata through ontologies unless clear benefit from it is apparent. Without metadata, no semantic functionality can be achieved. In contrast SIOC provides the means to present data in a rich, interconnected fashion. This has the potential to scale well with various browsers and applications that can take advantage of this information. An opportunity which leads to the so called “SIOC food chain” consisting of tools that generate SIOC data and tools that browse and reuse this data. Producers of SIOC data include exporters, queryable APIs, applications that can natively store semantic data and schema mapping tools that generate SIOC data. The data from these tools can be either collected in an intermediate step or consumed by another application. Collectors include Semantic Web spiders or crawlers designed to gather SIOC data from different sources and store it in a single place. Consumers include generic browsers for RDF data or custom extensions for browsers designed to display SIOC data.
 				</p>
 				<img src="images/siocEco.jpg" alt="SIOC Eco-system" class="centered" />
+				<div align="center"><b>Figure 5: SIOC Eco-system</b></div>
+				<br />
 				<p>
 					To promote the use of SIOC some initial so called “seed” applications covering key areas of the ecosystem have been developed. Some of these include the WordPress SIOC export plugin, the Semantic Radar extension for Firefox and various other applications for exploring SIOC data.
 				</p>
@@ -358,7 +365,10 @@
 			<p>
 				The idea behind data portability is that we as users want our data (e.g., pictures, blog posts, videos, preferences, etc.) to be shared across all our trusted platforms and services. This concept is very important as without it we can have multiple identities on separate social networks with different sets of friends. In contrast data portability would allow us to import one of our existing profiles and have a single global identity which would be shared across all services that we use. One way to achieve this would be to employ semantic formats to describe information (e.g., people, content objects and the connection between them) in this way social websites can collaborate with one another following common semantics. Some of the semantic technologies that are currently being used include FOAF, XFN / hCard, SIOC, etc. In addition object-centred social networks can act as excellent data silos for semantic applications.
 			</p>
+
 			<img src="images/siocD.jpg" alt="Data Portability" class="centered" />
+			<div align="center"><b>Figure 6: Data Portability</b></div>
+
 			<h2>Object-centred sociality in online communities</h2>
 			<p>
 				This concept deals with the idea of providing a semantic representation for the decentralised content which can be associated with a user across the Social Web. Centralisation of content can be achieved through a combination of SIOC and FOAF in order to describing user related objects. Specifically, SIOC can be utilised to provide linking between content items and a FOAF profile can unify information about the user's contacts. This then would result in an overall picture of the artefacts created through the activities carried out by the user. It may not always be the case that a user would like all the information centred but would be more interested in transferring information across different social communities. Again this can be achieved through a description of the content from the initial community site which will then be migrated to the new one (Interlinked online communities Paper ref Goes here).
@@ -378,41 +388,45 @@
 				The following is an example of an HTML list without any semantics:
 				<br />
 				<div class="codeblock greenText" >
-				&lt;ul&gt;
-				<br />
-				&lt;li&gt;48-50 Hutcheon St&lt;/li&gt;
-				<br />
-				&lt;li&gt;Aberdeen&lt;/li&gt;
-				<br />
-				&lt;li&gt;AB25 3TB&lt;/li&gt;
-				<br />
-				&lt;/ul&gt;
-				<br />
-				<br />
+					&lt;ul&gt;
+					<br />
+					&lt;li&gt;48-50 Hutcheon St&lt;/li&gt;
+					<br />
+					&lt;li&gt;Aberdeen&lt;/li&gt;
+					<br />
+					&lt;li&gt;AB25 3TB&lt;/li&gt;
+					<br />
+					&lt;/ul&gt;
 				</div>
+
+				<br />
+				<br />
 				We can use Microformats to index the list so that a machine could use the information.
 				In order to do that, we need to create a property "class" for each of the HTML tags:
-				<div class="codeblock greenText">
 				<br />
-				&lt;ul class="adr"&gt;
-				<br />
-				&lt;li class="street-address"&gt;48-50 Hutcheon St&lt;/li&gt;
-				<br />
-				&lt;li class="locality"&gt;Aberdeen&lt;/li&gt;
-				<br />
-				&lt;li class="postal-code"&gt;AB25 3TB&lt;/li&gt;
-				<br />
-				&lt;/ul&gt;
-				<br />
+				<div class="codeblock greenText" >
+					&lt;ul class="adr"&gt;
+					<br />
+					&lt;li class="street-address"&gt;48-50 Hutcheon St&lt;/li&gt;
+					<br />
+					&lt;li class="locality"&gt;Aberdeen&lt;/li&gt;
+					<br />
+					&lt;li class="postal-code"&gt;AB25 3TB&lt;/li&gt;
+					<br />
+					&lt;/ul&gt;
 				</div>
+				<br />
 			</p>
+
 			<p> After markup the search engines can provide the following visual representation of information: </p>
-			<img src="images/microformatsSS.jpg" alt="Microformats Example"/>
+			<img src="images/microformatsSS.jpg" alt="Microformats Example" class="centered"/>
+			<div align="center"><b>Figure 7: Microformats utilised by Google</b></div>
 			<h2>SIOC Core Ontology Vocabulary</h2>
 			<p>
 				The SIOC ontology uses terms to describe content in web pages. They can be grouped in two categories – classes (concepts) and properties (attributes).
 			</p>
 			<img src="images/siocCore.jpg" alt="SIOC Core Ontology" class="centered"/>
+			<div align="center"><b>Figure 8: SIOC Core Ontology</b></div>
 			<h3>Classes</h3>
 			<p>
 				sioc:Community – a high-level representation of the community concept. It describes a set of objects (sites, people, etc.) linked together by a common interest or topic. The Community class can by related to many sites, while a single site belongs to a particular Community.
@@ -466,11 +480,8 @@
 				It may not be possible a UserAccount to assign a topic to an Item when it is created, however a Container will usually have one selected that will also apply to all associated Items it has. Moreover, when a UserAccount or Usergroup are generated they can pick topics of interest to be included in their profiles. This way, Forums that match these topic of interest can be suggested to the UserAccount or UserGroup.
 			</p>
 			<h1 id="conclusion">Conclusion</h1>
-			<p>
-				Overall in 2013 an average of 15 % (5 000 000) web pages did implement semantic content markup, as of this year the number has risen to 10 000 000. The positive trend can be attributed to task specific and easy to implement vocabularies like SIOC and schema.org which were examined in the report. As explained earlier the ability to achieve better search engine result page rankings or to get all person related content from a social community can be highly valuable nowadays. In addition, a combined effort including SIOC can result in a complete amalgamation of social content for a person across different community platforms, which can later be trended and analysed. In terms of the schema.org vocabulary the fact that it is a combined project between competing search engine service providers aiming to supply developers with an easy to implement product goes to show that the identified trend in the begining of the paragraph is likely to be continued in upcoming years. In conclusion, wider adoption of semantic content through different vocabularies and techniques results in more Web 3.0 functionalities being made available to both webmasters and users. 
-			</p>
+			<p>Overall in 2013 an average of 15 % (5 000 000) web pages did implement semantic content markup, as of this year the number has risen to 10 000 000. The positive trend can be attributed to task specific and easy to implement vocabularies like SIOC and schema.org which were examined in the report. As explained earlier the ability to achieve better search engine result page rankings or to get all person related content from a social community can be highly valuable nowadays. In addition, a combined effort including SIOC can result in a complete amalgamation of social content for a person across different community platforms, which can later be trended and analysed. In terms of the schema.org vocabulary the fact that it is a combined project between competing search engine service providers aiming to supply developers with an easy to implement product goes to show that the identified trend in the begining of the paragraph is likely to be continued in upcoming years. In conclusion, wider adoption of semantic content through different vocabularies and techniques results in more Web 3.0 functionalities being made available to both webmasters and users. </p>
 			<h1 id="references">References</h1>
-			<p>
 				<ul>
 					<li>Abelson, Hal., Adida, Ben., 'Building Interoperable Web Metadata' (6 April 2006), MIT Computer Science & Artificial Intelligence Laboratory </li>
 					<li>Barker, P., & Campbell, L. M. (2014). What is schema. org?. Centre for Educational Technology, Interoperability and Standards.</li>
@@ -489,8 +500,7 @@
 					<li>Slideshare.net,. 'Semantic Web And Schema.Org'. N.p., 2015. Web. 15 Oct. 2015.</li>
 					<li>Videolectures.net, (2015). Light at the End of the Tunnel. [online] Available at: http://videolectures.net/iswc2013_guha_tunnel/ [Accessed 19 Oct. 2015].</li>
 					<li>W3.org,. 'SIOC Ontology Submission Request To W3C'. N.p., 2015. Web. 13 Oct. 2015.</li>			
-					</ul>
-			</p>
+				</ul>
 		</div>
 		<script>
 			$(function() {
@@ -521,11 +531,9 @@
 					//  At the end, we add return false so that the click on the link is not executed
 					return false;
 				});
-				
 				$("#simulate").click(function() {
 					$('a[rel="tab2"]').trigger("click");
 				});
-
 				function colorizeText(div, litsOfWords, color) {
 					if (div.length) {
 						for (var j = div.length - 1; j >= 0; j--) {
@@ -550,7 +558,6 @@
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["itemprop", "itemscope", "itemtype", "datetime", "xmlns", "lang", "xml:lang"], "blueText");
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["name", "duration", "performer", "startDate", "offers", "price", "priceCurrency", "url", "address", "location", "http://schema.org/SportsEvent", "http://schema.org/Offer", "http://schema.org/Place", "http://schema.org/Person", "2011-10-04", "http://www.w3.org/1999/xhtml", "\"en\""], "redText");
 				colorizeText(document.getElementsByClassName('mtab_content')[0], ["!DOCTYPE html PUBLIC ", "-//W3C//DTD XHTML 1.0 Strict//EN", "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd", "The Great Scottish Run 2015", "Between 01:00h - 04:00h", "John Doe", "04/10/2015", "35", "£", "TBC", "Example", "Glasgow Green Glasgow G1 5DB"], "blackText");
-
 				colorizeText(document.getElementsByClassName("codeblock"), ["itemprop", "itemscope", "itemtype", "class"], "blueText");
 				colorizeText(document.getElementsByClassName("codeblock"), ["name", "duration", "performer", "http://schema.org/SportsEvent", "http://schema.org/Person","street-address","adr","locality","postal-code"], "redText");
 				colorizeText(document.getElementsByClassName("codeblock"), ["The Great Scottish Run 2015", "Between 01:00h - 04:00h","48-50 Hutcheon St","Aberdeen","AB25 3TB"], "blackText");
@@ -558,6 +565,3 @@
 		</script>
 	</body>
 </html>
-<!-- References
-http://googlewebmastercentral.blogspot.co.uk/2009/10/help-us-make-web-better-update-on-rich.html
--->
