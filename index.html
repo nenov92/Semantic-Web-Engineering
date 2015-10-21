@@ -425,55 +425,87 @@
 			<div align="center"><b>Figure 8: SIOC Core Ontology</b></div>
 			<h3>Classes</h3>
 			<p>
-				sioc:Community – a high-level representation of the community concept. It describes a set of objects (sites, people, etc.) linked together by a common interest or topic. The Community class can by related to many sites, while a single site belongs to a particular Community.
+				<code>sioc:Community</code> – a high-level representation of the community concept. It describes a set of objects (sites, people, etc.) linked together by a common interest or topic. The Community class can by related to many sites, while a single site belongs to a particular Community.
 				<br /><br />
-				sioc:Container – this class groups together instances of Items. An Item is related to a Container via the
+				<code>sioc:Container</code> – this class groups together instances of Items. An Item is related to a Container via the
 				<br /><br />
-				sioc:has_container property, whilst Container groups many Items with sioc:container_of. A Container is a super class of Forum (one of the core classes in the SIOC ontology).
-				sioc:Forum – a discussion area or channel hosted by a Site, where users create Posts. A Forum is organised around a certain topic and may have a set of UserAccounts subscribed to it. One of these UserAccounts is the moderator of the Forum, who is responsible for managing its content and has the power to veto or edit a Post. One Forum can be related to another via sioc:has_parent relationship, in that way a hierarchy structure is created.
+				<code>sioc:has_container</code> property, whilst Container groups many Items with <code>sioc:container_of</code>. A Container is a super class of Forum (one of the core classes in the SIOC ontology).
+				<code>sioc:Forum</code> – a discussion area or channel hosted by a Site, where users create Posts. A Forum is organised around a certain topic and may have a set of UserAccounts subscribed to it. One of these UserAccounts is the moderator of the Forum, who is responsible for managing its content and has the power to veto or edit a Post. One Forum can be related to another via <code>sioc:has_parent</code> relationship, in that way a hierarchy structure is created.
 				<br /><br />
-				sioc:Item – a part of Container and a super class of Post.
+				<code>sioc:Item</code> – a part of Container and a super class of Post.
 				<br /><br />
-				sioc:Post – the building block of the Forum class. It is a message created by UserAccount and posted to a specific Forum. One Post can be related to another via sioc:has_reply to create a Thread of messages, where UserAccounts discuss a topic.
+				<code>sioc:Post</code> – the building block of the Forum class. It is a message created by UserAccount and posted to a specific Forum. One Post can be related to another via <code>sioc:has_reply</code> to create a Thread of messages, where UserAccounts discuss a topic.
 				<br /><br />
-				sioc:Role – describes the function of a UserAccount and its privileges. A Role can be a Forum moderator or a Site
+				<code>sioc:Role</code> – describes the function of a UserAccount and its privileges. A Role can be a Forum moderator or a Site
 				administrator.
 				<br /><br />
-				sioc:Site – subclass of Space, that hosts a set of Forums used for discussions by an online community.
+				<code>sioc:Site</code> – subclass of Space, that hosts a set of Forums used for discussions by an online community.
 				<br /><br />
-				sioc:Space – represents a location where data resides. A Container is linked to Space with sioc:has_space relationship.
+				<code>sioc:Space</code> – represents a location where data resides. A Container is linked to Space with <code>sioc:has_space</code> relationship.
 				<br /><br />
-				sioc:Thread – defines a conversation within a Forum, which has a collection of Posts created by UserAccounts. Usually Posts are ordered chronologically from oldest to latest and a single UserAccount can post multiple messages within a Thread.
+				<code>sioc:Thread</code> – defines a conversation within a Forum, which has a collection of Posts created by UserAccounts. Usually Posts are ordered chronologically from oldest to latest and a single UserAccount can post multiple messages within a Thread.
 				<br /><br />
-				sioc:UserAccount – describes a membership of a user to an online community. Each user via its UserAccount is able to create or edit Posts in a Thread. All UserAccounts can subscribe to a Forum, whereas Roles like moderator or administrator have higher privileges. Moderators are responsible for editing and contributing to content in Forums, while administrators can promote UserAccounts to moderators and manage topics included in the online community. UserAccounts can be grouped in UserGroups with different levels of access and rights.
-				A UserAccount belongs to a single foaf:Person type, whilst one foaf:Person can have many UserAccounts. UserAccount is used to represent the attributes of an account in an online community and foaf:Person adds additional information about the individual itself.
+				<code>sioc:UserAccount</code> – describes a membership of a user to an online community. Each user via its UserAccount is able to create or edit Posts in a Thread. All UserAccounts can subscribe to a Forum, whereas Roles like moderator or administrator have higher privileges. Moderators are responsible for editing and contributing to content in Forums, while administrators can promote UserAccounts to moderators and manage topics included in the online community. UserAccounts can be grouped in UserGroups with different levels of access and rights.
+				A UserAccount belongs to a single <code>foaf:Person</code> type, whilst one <code>foaf:Person</code> can have many UserAccounts. UserAccount is used to represent the attributes of an account in an online community and foaf:Person adds additional information about the individual itself.
 				<br /><br />
-				sioc:Usergroup – a collection of UserAccounts, which can based on either interest in a certain topic (Thread) or the Role members of the group have (e.g. moderator, administrator).
+				<code>sioc:Usergroup</code> – a collection of UserAccounts, which can based on either interest in a certain topic (Thread) or the Role members of the group have (e.g. moderator, administrator).
 			</p>
 			<h3>Main Properties</h3>
 			<p>
 				The main properties used to describe relationships between classes are listed below. They help to extract the meaning from community sites.
 				<br /><br />
-				sioc:has_container – links an instance of Item to the Container it belongs.
+				<code>sioc:has_container</code> – links an instance of Item to the Container it belongs.
 				<br /><br />
-				sioc:has_creator – refers to the UserAccount that created an Item. This property enables to follow the link from an Item to its author, thus other resources created by the same UserAccount can be located/identified.
+				<code>sioc:has_creator</code> – refers to the UserAccount that created an Item. This property enables to follow the link from an Item to its author, thus other resources created by the same UserAccount can be located/identified.
 				<br /><br />
-				sioc:has_function – represents the Role an UserAccount has. A UserAccount can have different rights/permissions/privileges in different Forums.
+				<code>sioc:has_function</code> – represents the Role an UserAccount has. A UserAccount can have different rights/permissions/privileges in different Forums.
 				<br /><br />
-				sioc:has_host – links a Forum to the Site it resides in.
+				<code>sioc:has_host</code> – links a Forum to the Site it resides in.
 				<br /><br />
-				sioc:has_member – describes the relationship between a Usergroup and an instance of its members.
+				<code>sioc:has_member</code> – describes the relationship between a Usergroup and an instance of its members.
 				<br /><br />
-				sioc:has_parent – a Container/Forum can have a parent Container/Forum.
+				<code>sioc:has_parent</code> – a Container/Forum can have a parent Container/Forum.
 				<br /><br />
-				sioc:has_reply – an Item/Post can be created as a reply to another Item/Post. Thus, a tree-like structure is formed to present a series of Items/Posts under the same topic.
+				<code>sioc:has_reply</code> – an Item/Post can be created as a reply to another Item/Post. Thus, a tree-like structure is formed to present a series of Items/Posts under the same topic.
 				<br /><br />
-				sioc:has_scope – points to the Forum that a Role has privileges on.
+				<code>sioc:has_scope</code> – points to the Forum that a Role has privileges on.
 				<br /><br />
-				sioc:has_space – describes the Space where data resides in.
+				<code>sioc:has_space</code> – describes the Space where data resides in.
 				<br /><br />
-				sioc:topic – this property can be applied to the most of the classes building the SIOC ontology. Its metadata is used to match documents and people to each other.
+				<code>sioc:topic</code> – this property can be applied to the most of the classes building the SIOC ontology. Its metadata is used to match documents and people to each other.
 				It may not be possible a UserAccount to assign a topic to an Item when it is created, however a Container will usually have one selected that will also apply to all associated Items it has. Moreover, when a UserAccount or Usergroup are generated they can pick topics of interest to be included in their profiles. This way, Forums that match these topic of interest can be suggested to the UserAccount or UserGroup.
+			</p>
+			<h3>Example</h3>
+<pre>&lt;sioc:Post rdf:about="http://johnbreslin.com/blog/2006/09/07/creating-connections-between-discussion-clouds-with-sioc/"&gt;
+	&lt;dcterms:title&gt;Creating connections between discussion clouds with SIOC&lt;/dcterms:title&gt;
+	&lt;dcterms:created&gt;2006-09-07T09:33:30Z&lt;/dcterms:created&gt;
+	&lt;sioc:has_container rdf:resource="http://johnbreslin.com/blog/index.php?sioc_type=site#weblog"/&gt;
+	&lt;sioc:has_creator&gt;
+		&lt;sioc:UserAccount rdf:about="http://johnbreslin.com/blog/author/cloud/" rdfs:label="Cloud"&gt;
+			&lt;rdfs:seeAlso rdf:resource="http://johnbreslin.com/blog/index.php?sioc_type=user&amp;sioc_id=1"/&gt;
+		&lt;/sioc:UserAccount&gt;
+	&lt;/sioc:has_creator&gt;
+	&lt;sioc:content>SIOC provides a unified vocabulary for content and interaction description: a semantic layer that can co-exist with existing discussion platforms.&lt;/sioc:content&gt;
+	&lt;sioc:topic rdfs:label="Semantic Web" rdf:resource="http://johnbreslin.com/blog/category/semantic-web/"/&gt;
+	&lt;sioc:topic rdfs:label="Blogs" rdf:resource="http://johnbreslin.com/blog/category/blogs/"/&gt;
+	&lt;sioc:has_reply&gt;
+		&lt;sioc:Post rdf:about="http://johnbreslin.com/blog/2006/09/07/creating-connections-between-discussion-clouds-with-sioc/#comment-123928"&gt;
+			&lt;rdfs:seeAlso rdf:resource="http://johnbreslin.com/blog/index.php?sioc_type=comment&amp;sioc_id=123928"/&gt;
+		&lt;/sioc:Post&gt;
+	&lt;/sioc:has_reply&gt;
+&lt;/sioc:Post&gt;</pre>
+			<p>
+				The above example has been taken from the SIOC specification. It shows a post (<code>sioc:Post</code>) object with the following properties:
+				</br>
+				<ul>
+					<li>Title <code>dcterms:title</code> - "Creating connections between discussion clouds with SIOC"</li>
+					<li>Date of creation <code>dcterms:created</code> with a date formatted with compliance to ISO-8601 - 2006-09-07T09:33:30Z</li>
+					<li>Relationship <code>sioc:has_container</code> with an object - "http://johnbreslin.com/blog/index.php?sioc_type=site#weblog" which indicates a <code>sioc:Forum</code> object that this post is part of</li>
+					<li>Relationship <code>sioc:has_creator</code> with a user account <code>sioc:UserAccount</code> object with name "Cloud" and identified as "http://johnbreslin.com/blog/author/cloud/". It also has a <code>rdfs:seeAlso</code> property providing more SIOC information about the object</li>
+					<li>Content <code>sioc:content</code> of the post holding the textual representation of the information written in the post</li>
+					<li>Topics <code>sioc:topic</code> - "Semantic Web" and "Blogs" identified by "http://johnbreslin.com/blog/category/semantic-web/" and "http://johnbreslin.com/blog/category/blogs/" respectively</li>
+					<li>Relationship <code>sioc:has_reply</code> pointing to a reply identified as "http://johnbreslin.com/blog/2006/09/07/creating-connections-between-discussion-clouds-with-sioc/#comment-123928" which also has a <code>rdfs:seeAlso</code> property linking to more SIOC data about the reply</li>
+				</ul>
 			</p>
 			<h1 id="conclusion">Conclusion</h1>
 			<p>Overall in 2013 an average of 15 % (5 000 000) web pages did implement semantic content markup, as of this year the number has risen to 10 000 000. The positive trend can be attributed to task specific and easy to implement vocabularies like SIOC and schema.org which were examined in the report. As explained earlier the ability to achieve better search engine result page rankings or to get all person related content from a social community can be highly valuable nowadays. In addition, a combined effort including SIOC can result in a complete amalgamation of social content for a person across different community platforms, which can later be trended and analysed. In terms of the schema.org vocabulary the fact that it is a combined project between competing search engine service providers aiming to supply developers with an easy to implement product goes to show that the identified trend in the begining of the paragraph is likely to be continued in upcoming years. In conclusion, wider adoption of semantic content through different vocabularies and techniques results in more Web 3.0 functionalities being made available to both webmasters and users. </p>
@@ -489,6 +521,7 @@
 					<li>Guha, R V; Tim Bray (1997-06-06). Meta Content Framework Using XML. W3C. Retrieved 2014-09-14.</li>
 					<li>Lee, Jessica. 'Pages With Schema Markup Rank 4 Positions Higher In Search Results [Study]'. Search Engine Watch. N.p., 2014. Web. 16 Oct. 2015.</li>
 					<li>Passant, A., Bojārs, U., Breslin, J. G., & Decker, S. (2010). The SIOC project: semantically-interlinked online communities, from humans to machines. In Coordination, Organizations, Institutions and Norms in Agent Systems V (pp. 179-194). Springer Berlin Heidelberg.</li>
+					<li>Rdfs.org,. 'SIOC Core Ontology Specification'. N.p., 2015. Web. 21 Oct. 2015.</li>
 					<li>Schema.org,. 'Getting Started - Schema.Org'. N.p., 2015. Web. 13 Oct. 2015.</li>
 					<li>Seoskeptic.com,. 'What Schema.Org Means For SEO And Beyond'. N.p., 2015. Web. 14 Oct. 2015.</li>
 					<li>Sioc-project.org,. 'Sioc-Project.Org | Semantically-Interlinked Online Communities'. N.p., 2015. Web. 14 Oct. 2015.</li>
